@@ -34,8 +34,8 @@ To compile and play this custom chart, you will need the following tools:
 ## 👥 Credits
 
 * **Musical Artists:** 
-  * **Ren Gill** — [Official Site](https://www.rengill.com) (Inquiries: management@rengill.com)
-  * **Chris Webby** — [Official Site](https://webbysworld.com) (Inquiries: booking@webbysworld.com)
+  * **Ren Gill** — [Official Site]([https://www.rengill.com](https://renmakesmusic.lnk.to/)) (Inquiries: connor@renmakesmusic.com)
+  * **Chris Webby** — [Official Site]([https://webbysworld.com](https://chriswebby.com)) (Inquiries: booking@chriswebby.com)
 * **Official Experience:** Explore the overarching collaborative release at [Inpatient World](https://inpatient.world).
 * **Chart Templates & Automation:** Built in collaboration with your Gemini AI Assistant.
 
