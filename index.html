@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarantula (Ren x Chris Webby) - Clone Hero Custom Chart Project</title>
+    <style>
+        /* Base Reset & Styling */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d0c10;
+            color: #f1f1f5;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        /* Container */
+        .wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            text-align: center;
+            border-bottom: 2px solid #b22222;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        .eyebrow {
+            color: #b22222;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin: 0 0 10px 0;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a0a0ab;
+            margin: 0;
+        }
+
+        /* Media Container (Video Frame) */
+        .media-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #2d2d35;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .media-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Link Button */
+        .btn-link-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .btn-world {
+            display: inline-block;
+            background-color: #b22222;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-weight: 700;
+            border-radius: 4px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: background-color 0.2s ease;
+        }
+        .btn-world:hover {
+            background-color: #8b1c1c;
+        }
+
+        /* Information Sections */
+        section {
+            margin-bottom: 40px;
+            background-color: #16151c;
+            border: 1px solid #25242e;
+            border-radius: 8px;
+            padding: 30px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-left: 4px solid #b22222;
+            padding-left: 12px;
+        }
+        p {
+            color: #c5c5d2;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        /* File Code Containers */
+        .code-title {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #a0a0ab;
+            background-color: #21202a;
+            padding: 8px 16px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            margin-bottom: 0;
+            border-bottom: 1px solid #2d2d35;
+            display: inline-block;
+        }
+        pre {
+            background-color: #09090c;
+            padding: 20px;
+            border-radius: 6px;
+            border-top-left-radius: 0;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            color: #a9ffaf;
+            margin-top: 0;
+            margin-bottom: 24px;
+            border: 1px solid #2d2d35;
+        }
+
+        /* Play Instructions List */
+        ol {
+            padding-left: 20px;
+            margin: 0;
+        }
+        ol li {
+            margin-bottom: 15px;
+            color: #c5c5d2;
+        }
+        ol li strong {
+            color: #ffffff;
+        }
+
+        /* Contact Details Grid / Table */
+        .contact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .contact-table th, .contact-table td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #2d2d35;
+        }
+        .contact-table th {
+            color: #a0a0ab;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+        .contact-table td strong {
+            color: #ffffff;
+        }
+        .contact-table a {
+            color: #b22222;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-table a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            color: #5c5c68;
+            font-size: 0.85rem;
+            margin-top: 60px;
+            border-top: 1px solid #25242e;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="eyebrow">Clone Hero Custom Track</div>
+            <h1>Tarantula</h1>
+            <p class="subtitle">Ren x Chris Webby (Inpatient Project)</p>
+        </header>
+
+        <!-- Video Section -->
+        <div class="media-container">
+            <iframe src="https://www.youtube.com/embed/0DTrjpIb4QI" title="Inpatient (Ren x Chris Webby) - Tarantula" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <!-- Inpatient World Callout Button -->
+        <div class="btn-link-container">
+            <a href="https://inpatient.world" target="_blank" class="btn-world">Explore Inpatient World</a>
+        </div>
+
+        <!-- How To Play Section -->
+        <section>
+            <h2>How to Install & Play This Song</h2>
+            <p>Ready to shred to this heavy Hip Hop collaboration? Follow these simple steps to load "Tarantula" into your Clone Hero directory:</p>
+            <ol>
+                <li>
+                    <strong>Get the Audio:</strong> Download or record the audio from the video above. Open it in an audio editor (like Audacity), trim any silence from the absolute start, and save it as an Ogg Vorbis file named exactly <code>song.ogg</code>.
+                </li>
+                <li>
+                    <strong>Create a Song Folder:</strong> Create a folder inside your Clone Hero <code>Songs</code> directory named <code>Ren - Tarantula (ft. Chris Webby)</code>.
+                </li>
+                <li>
+                    <strong>Generate files:</strong> Copy the two configuration scripts below into separate raw text documents. Save them exactly as <code>song.ini</code> and <code>notes.chart</code> inside your newly created folder.
+                </li>
+                <li>
+                    <strong>Scan Songs:</strong> Open Clone Hero on your computer, navigate to <strong>Settings &gt; General &gt; Scan Songs</strong>. 
+                </li>
+                <li>
+                    <strong>Play:</strong> Grab your guitar controller, queue up the track, and hit the highway!
+                </li>
+            </ol>
+        </section>
+
+        <!-- Code Snippets Section -->
+        <section>
+            <h2>Source Configuration Files</h2>
+            <p>Paste these files directly into your song folder to build out the track's metadata framework, lyrics, sync track, and sections.</p>
+
+            <div class="code-title">song.ini</div>
+            <pre>[Song]
+name = Tarantula
+artist = Ren x Chris Webby
+album = Inpatient
+genre = Hip Hop / Rap
+year = 2026
+charter = YourName & Gemini
+preview_start_time = 57000
+icon = custom
+diff_guitar = 3
+diff_band = 3</pre>
+
+            <div class="code-title">notes.chart</div>
+            <pre>[Song]
+{
+  Name = "Tarantula"
+  Artist = "Ren x Chris Webby"
+  Album = "Inpatient"
+  Genre = "Hip Hop"
+  Year = ", 2026"
+  Charter = "YourName & Gemini"
+  Offset = 0
+  Resolution = 192
+  Difficulty = 3
+  PreviewStart = 57
+  PreviewEnd = 87
+  Genre = "Hip Hop/Rap"
+  MediaType = "cd"
+  MusicStream = "song.ogg"
+}
+[SyncTrack]
+{
+  0 = TS 4
+  0 = B 140000
+}
+[Events]
+{
+  0 = E "section Intro"
+  5824 = E "section Ren's Intro"
+  5824 = E "lyric tarantula "
+  6272 = E "lyric gang "
+  6720 = E "lyric gang "
+  7168 = E "lyric right "
+  7616 = E "lyric from "
+  8064 = E "lyric the "
+  8512 = E "lyric stereo"
+  11648 = E "section Chorus 1"
+  11648 = E "lyric I "
+  12096 = E "lyric just "
+  12544 = E "lyric let "
+  12992 = E "lyric go "
+  13440 = E "lyric there's "
+  13888 = E "lyric a "
+  14336 = E "lyric crack "
+  14784 = E "lyric in "
+  15232 = E "lyric my "
+  15680 = E "lyric design"
+  25536 = E "section Build-up"
+  25536 = E "lyric I "
+  25984 = E "lyric got "
+  26432 = E "lyric the "
+  26880 = E "lyric devil "
+  27328 = E "lyric on "
+  27776 = E "lyric my "
+  28224 = E "lyric shoulder"
+  54208 = E "section Chris Webby's Verse"
+  54208 = E "lyric Tarantula "
+  54656 = E "lyric bang "
+  55104 = E "lyric bang "
+  55552 = E "lyric contract "
+  56000 = E "lyric the "
+  56448 = E "lyric muscular"
+  88256 = E "section Chorus 2"
+  100000 = E "section Instrumental Bridge"
+  131712 = E "section Collab Verse"
+  131712 = E "lyric Back "
+  132160 = E "lyric to "
+  132608 = E "lyric back "
+  133056 = E "lyric flow"
+  144256 = E "section Outro"
+}
+[Single]
+{
+  # Place your custom notes here using Moonscraper
+}</pre>
+        </section>
+
+        <!-- Contact Section -->
+        <section>
+            <h2>Artist Information & Contacts</h2>
+            <p>Connect with the creators or check out official inquiries through their management channels:</p>
+            
+            <table class="contact-table">
+                <thead>
+                    <tr>
+                        <th>Artist</th>
+                        <th>Website / Platform</th>
+                        <th>Professional Contact / Social</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Ren (Ren Gill)</strong></td>
+                        <td><a href="https://www.rengill.com" target="_blank">rengill.com</a></td>
+                        <td><a href="mailto:management@rengill.com">management@rengill.com</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chris Webby</strong></td>
+                        <td><a href="https://webbysworld.com" target="_blank">webbysworld.com</a></td>
+                        <td><a href="mailto:booking@webbysworld.com">booking@webbysworld.com</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>Custom chart files provided courtesy of your Gemini AI Co-Charter. Clone Hero is a community-led fan project not affiliated with the artists.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
