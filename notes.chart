@@ -1,0 +1,72 @@
+[Song]
+{
+  Name = "Tarantula"
+  Artist = "Ren x Chris Webby"
+  Album = "Inpatient"
+  Genre = "Hip Hop"
+  Year = ", 2026"
+  Charter = "YourName & Gemini"
+  Offset = 0
+  Resolution = 192
+  Difficulty = 3
+  PreviewStart = 57
+  PreviewEnd = 87
+  Genre = "Hip Hop/Rap"
+  MediaType = "cd"
+  MusicStream = "song.ogg"
+}
+[SyncTrack]
+{
+  0 = TS 4
+  0 = B 140000
+}
+[Events]
+{
+  0 = E "section Intro"
+  5824 = E "section Ren's Intro"
+  5824 = E "lyric tarantula "
+  6272 = E "lyric gang "
+  6720 = E "lyric gang "
+  7168 = E "lyric right "
+  7616 = E "lyric from "
+  8064 = E "lyric the "
+  8512 = E "lyric stereo"
+  11648 = E "section Chorus 1"
+  11648 = E "lyric I "
+  12096 = E "lyric just "
+  12544 = E "lyric let "
+  12992 = E "lyric go "
+  13440 = E "lyric there's "
+  13888 = E "lyric a "
+  14336 = E "lyric crack "
+  14784 = E "lyric in "
+  15232 = E "lyric my "
+  15680 = E "lyric design"
+  25536 = E "section Build-up"
+  25536 = E "lyric I "
+  25984 = E "lyric got "
+  26432 = E "lyric the "
+  26880 = E "lyric devil "
+  27328 = E "lyric on "
+  27776 = E "lyric my "
+  28224 = E "lyric shoulder"
+  54208 = E "section Chris Webby's Verse"
+  54208 = E "lyric Tarantula "
+  54656 = E "lyric bang "
+  55104 = E "lyric bang "
+  55552 = E "lyric contract "
+  56000 = E "lyric the "
+  56448 = E "lyric muscular"
+  88256 = E "section Chorus 2"
+  100000 = E "section Instrumental Bridge"
+  131712 = E "section Collab Verse"
+  131712 = E "lyric Back "
+  132160 = E "lyric to "
+  132608 = E "lyric back "
+  133056 = E "lyric flow"
+  144256 = E "section Outro"
+}
+[Single]
+{
+  # We will manually place your notes here in Moonscraper!
+}
