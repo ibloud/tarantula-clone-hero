@@ -112,3 +112,7 @@ Acceptance: a person can choose a route, complete the small outcome, switch rout
 - [Sonic Pi MIDI tutorial](https://sonic-pi.net/tutorial-11.html)
 - [Sonic Pi OSC tutorial](https://sonic-pi.net/tutorial-12.html)
 - [Raspberry Pi Foundation lesson source](https://github.com/raspberrypilearning/getting-started-with-sonic-pi)
+
+## Hardware reuse and compatibility
+
+The [shared PIXIE hardware guide](https://github.com/ibloud/pixie-device-stewardship/blob/main/docs/HARDWARE-PATHWAYS.md) covers iPad/iPhone, Intel/T2 Macs, Apple Silicon, Android, repair and recovery. Tarantula remains independent and uses this as a reference, not a device-support claim. Music tests must distinguish Cyber-G audio recording from MIDI control and verify actual adapters, power, drivers, accessible input and export-to-Files on the chosen hardware.
