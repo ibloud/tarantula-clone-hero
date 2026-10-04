@@ -8,7 +8,7 @@ This is a Loptr Lab music education project, separate from PIXIE. It adopts the 
 
 1. Watch an official or authorized video where Ren Gill explains a creative decision. Initially provide a source link and timestamp; use an official embed only when embedding is permitted.
 2. Answer original questions about what that specific source establishes. Every factual answer needs a supporting timestamp and a checked explanation.
-3. Practice the concept through an independently authored Clone Hero chart using verified public-domain material and a recording we own or have permission to distribute.
+3. Practice the concept through a rights-cleared MIDI/MusicXML keyboard exercise in Synthesia, or an independently authored Clone Hero rhythm chart. Use verified public-domain material and permitted arrangements; any distributed recording also needs its own rights basis.
 4. Reflect through an untimed text, listening, tapping, or discussion exercise. Gameplay is optional.
 
 Potential topics include pulse, subdivision, syncopation, repetition, contrasting sections, and arrangement. These are candidate topics, not claims about what Ren says in any particular video. Select the source before writing the lesson.
@@ -16,6 +16,14 @@ Potential topics include pulse, subdivision, syncopation, repetition, contrastin
 Clone Hero supplies timing practice. The companion lesson supplies explanations and questions. Five-fret controller mappings do not teach actual guitar fingering, pitch, or harmony by themselves. Scores measure performance on the chart, not musical comprehension, health, or personal worth.
 
 Clone Hero custom songs require a notes.chart or notes.mid, an audio file, and song.ini. Compatibility with other programs must be checked separately.
+
+## Tool selection
+
+Synthesia is the preferred candidate for a first keyboard lesson: its documented features include waiting for the correct note in melody practice, practicing hands separately, optional notation, and loading MIDI files. Its content guide also describes MusicXML. Check the installed version's actual import support and behavior.
+
+Clone Hero remains an optional rhythm-game route. Neither application supplies the source-based video questions or explanations; those belong in our companion lesson.
+
+Use an independently authored exercise illustrating the verified concept, not an unlicensed transcription of Ren's composition. A MIDI file is not automatically rights-free. Synthesia is third-party software: distribute our permitted lesson files, not the application, and do not promise free access to paid features. Check iPad import, input devices, accessibility, cost, and privacy before choosing it for a learner. Falling notes alone do not establish theory understanding or sound instrumental technique.
 
 ## Limited responses
 
@@ -59,12 +67,12 @@ For each asset record: title, creator, source URL, edition, composition rights, 
 
 ## Smallest pilot and acceptance checks
 
-The first pilot consists of one verified process video, three timestamp-supported questions, one short rights-cleared practice chart, and one accessible alternative exercise.
+The first pilot consists of one verified process video, three timestamp-supported questions, one short rights-cleared keyboard exercise (or rhythm chart), and one accessible alternative exercise.
 
 Before calling it ready:
 1. A human checks the video, question wording, answer evidence, and distinction between facts and interpretation.
 2. Rights records are complete for every distributed asset.
-3. The song pack scans and plays in the named Clone Hero version; chart timing and difficulty are checked by a human.
+3. The exercise imports and plays in the named Synthesia version (or the song pack scans and plays in Clone Hero); note mapping, timing, and difficulty are checked by a human.
 4. A learner can explain the target concept without relying on a score.
 5. The alternative learning route is usable; actual device/input and accessibility checks are recorded.
 6. A consent-based playtest documents what worked, what failed, and what remains unverified.
@@ -72,6 +80,9 @@ Before calling it ready:
 No source video, public-domain composition, recording, permissions, device validation, or completed pilot is established by this proposal.
 
 ## References
+
+- [Synthesia features](https://synthesiagame.com/)
+- [Synthesia content creation guide](https://www.synthesiagame.com/support/guide/contentCreators)
 
 - [Clone Hero custom song requirements](https://wiki.clonehero.net/books/clone-hero-manual/page/adding-custom-songs)
 - [Clone Hero controls and instruments](https://wiki.clonehero.net/books/general-info/page/frequently-asked-questions)
