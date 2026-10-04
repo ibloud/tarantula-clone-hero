@@ -19,6 +19,8 @@ We are planning companion lessons using Ren Gill's own explanations of his creat
 
 "My responses are limited to this source" and "not stated in this source" are valid outcomes. Controller accuracy is not a substitute for musical understanding.
 
+[Find your fit: iPad recording, instrument play, Sonic Pi, and controller/game pathways](docs/FIND_YOUR_FIT.md).
+
 [Lesson design, ethics, rights records, and pilot acceptance checks](docs/ETHICAL_MUSIC_LESSONS.md). Status: proposal; no completed lesson pack or validated learning outcome yet.
 
 ---
