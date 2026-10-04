@@ -67,3 +67,8 @@ To compile and play this custom chart, you will need the following tools:
 * **Original Project Material:** The MIT License applies only to original material we have authority to license. It does not cover third-party music, lyrics, arrangements, recordings, charts, or Clone Hero itself.
 * **Artist Works:** Rights remain with their respective rights holders. This independent fan project has no documented artist endorsement or permission to redistribute their works. Educational or noncommercial purpose does not automatically establish fair use.
 * **Current Template:** The Tarantula files are unverified templates, not a completed playable chart or rights-cleared lesson pack. Timing, lyrics, metadata, and permissions require review before reuse.
+
+
+## Use what you have · controller lab
+
+The [optional MIDI exercise](https://ibloud.github.io/ren-tap-tap-revenge/lesson.html#controller) can learn note/button messages and feed existing timed or untimed actions in a supporting browser after permission. Physical DJ2GO2 validation remains open. [Equipment, AirPods accessibility, manual test records and Creator OS configuration](docs/CONTROLLER-LAB.md) explain roles for DJ2GO2, Tula, Shure 215, AirPods Pro 3 and Cyber-G. Controller code stays in the existing exercise repo; Tarantula routes learners and Creator OS keeps notes/prepares chosen media. No new backend or automatic device/audio transfer is added.
