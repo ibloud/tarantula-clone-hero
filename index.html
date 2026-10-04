@@ -67,6 +67,7 @@ code{font-size:.93em;overflow-wrap:anywhere}#hackathon-list li{margin-bottom:1re
 
 <section id="find-fit" aria-labelledby="fit-title">
 <div class="eyebrow">Start small</div><h2 id="fit-title">Find your fit</h2>
+<p><a class="button" href="https://ibloud.github.io/ren-tap-tap-revenge/lesson.html">Try the original music/code exercise</a> · <a href="https://ibloud.github.io/pixie-creator-os/session.html">Keep your place in a creator session</a></p>
 <p class="intro">Choose what interests you. You can switch paths at any time. No diagnosis, account, instrument purchase, or public score is required.</p>
 <form id="fit-form">
 <fieldset><legend>What would you like to try?</legend><div class="choices">
@@ -99,7 +100,7 @@ code{font-size:.93em;overflow-wrap:anywhere}#hackathon-list li{margin-bottom:1re
 </section>
 
 <section id="build" aria-labelledby="build-title"><div class="eyebrow">For contributors</div><h2 id="build-title">Finish one useful learning loop</h2>
-<p>Help someone move from a musical idea to a small working result. The first milestone is one verified source, three evidence-backed questions, one cleared exercise, and an accessible alternative.</p>
+<p>Help someone move from a musical idea to a small working result. An original synthetic-tone exercise now provides editable note data, timed and untimed practice, and local chart export. The next lesson milestone remains one verified source and three evidence-backed questions.</p>
 <ul><li><strong>Musicians:</strong> check the exercise, explanations, and musical usefulness.</li><li><strong>Coders:</strong> connect the lesson, chart editing, local export, and calm feedback.</li><li><strong>Players and accessibility reviewers:</strong> test touch, keyboard, readable steps, focus, and recovery.</li></ul>
 <div class="actions"><a class="button secondary" href="https://github.com/ibloud/tarantula-clone-hero">Explore the Tarantula repository</a><a href="https://github.com/ibloud/ren-tap-tap-revenge/blob/main/docs/CYBER_G_LEARNING_LAB.md">Read the developer scope</a></div>
 <details><summary>Cyber-G: play along first, validate input separately</summary><p>Cyber-G can be an optional instrument alongside the lesson. USB audio and MIDI note events are different capabilities. Model, module, firmware, receiving app, and browser all need checking before automatic scoring or control is promised.</p><p>Start with GarageBand recording and local export, then test audio and keyboard MIDI separately. Safari browser MIDI access is not established by MIDI working in a native app.</p></details>
@@ -131,29 +132,9 @@ code{font-size:.93em;overflow-wrap:anywhere}#hackathon-list li{margin-bottom:1re
 </main>
 <footer><span>Tarantula · An independent Loptr Lab community project</span><a href="https://github.com/ibloud/tarantula-clone-hero">Source &amp; contribution</a><a href="https://loptrlab.com">Loptr Lab</a></footer>
 </div>
+<script src="pathways.js"></script>
 <script>
-const routes = {
-  play: {
-    ipad: ['Start with a touch instrument', 'Open GarageBand and try one note. Listen, then repeat it at your own pace.', 'https://www.apple.com/ios/garageband/', 'Open GarageBand information', 'An external instrument is optional. Cyber-G input is not verified here.'],
-    computer: ['Try a short keyboard exercise', 'Explore Synthesia with an original or cleared exercise. Practice one small phrase.', 'https://synthesiagame.com/', 'Explore Synthesia', 'Check device support and any paid-feature requirements before choosing it.'],
-    browser: ['Listen before you play', 'Explore a short Sonic Pi sound example. You can listen and change a note without buying an instrument.', 'https://sonic-pi.net/', 'Explore Sonic Pi', 'Browser audio and accessibility still need testing on your device.']
-  },
-  record: {
-    ipad: ['Record a short take on iPad', 'Use GarageBand Audio Recorder, save the project, then share an audio copy to Files.', 'https://support.apple.com/guide/garageband-ipad/share-songs-chs39284d66/ipados', 'Open the iPad export guide', 'Try the built-in microphone first. Cyber-G USB recording needs a separate device test.'],
-    computer: ['Record and edit on desktop', 'Use Audacity to record a few seconds of original sound and export an audio copy locally.', 'https://www.audacityteam.org/', 'Explore Audacity', 'Audacity is the desktop route. No upload or publication is required.'],
-    browser: ['Choose a recording route', 'Use the pathway guide to pick a recorder for your device. Keep your first take local.', 'https://github.com/ibloud/tarantula-clone-hero/blob/main/docs/FIND_YOUR_FIT.md', 'Read recording pathways', 'This page does not access your microphone or record audio.']
-  },
-  code: {
-    ipad: ['Change one sound with code', 'Try Sonic Pi Web: change one note or pause, run it, and listen for the difference.', 'https://sonic-pi.net/', 'Explore Sonic Pi Web', 'The web version is separate from the app: MIDI is unavailable in Safari and OSC is app-only.'],
-    computer: ['Start coding music', 'Follow the Raspberry Pi Foundation Sonic Pi introduction. Change one note or rhythm before adding a controller.', 'https://projects.raspberrypi.org/en/projects/getting-started-with-sonic-pi', 'Open the Sonic Pi introduction', 'Use the current Sonic Pi version; tutorial and platform features may differ.'],
-    browser: ['Try music as code', 'Explore Sonic Pi Web with a short original pattern. Begin with playback, then change one value.', 'https://sonic-pi.net/', 'Explore Sonic Pi Web', 'External device support varies by browser. You can begin without a controller.']
-  },
-  build: {
-    ipad: ['Begin with the tap-game prototype', 'Try the existing browser prototype or inspect its chart data. Start with one tap mapped to one action.', 'https://ibloud.github.io/ren-tap-tap-revenge/', 'Open the experimental tap game', 'The prototype needs real iPad and accessibility checks. It is not a source-checked Ren lesson.'],
-    computer: ['Inspect an input-to-game example', 'Read the tap-game code and chart events. Change one mapping before adding MIDI or OSC hardware.', 'https://github.com/ibloud/ren-tap-tap-revenge', 'Read the prototype code', 'Use original or cleared content. Hardware input and chart import still need development.'],
-    browser: ['Explore game-making pathways', 'Read how simulated inputs, charts and controller experiments connect to one learning loop.', 'https://github.com/ibloud/tarantula-clone-hero/blob/main/docs/FIND_YOUR_FIT.md', 'Read the build pathway', 'A controller is optional. Simulation is not evidence of hardware compatibility.']
-  }
-};
+const routes = window.TarantulaRoutes;
 document.getElementById('fit-form').addEventListener('submit', function(event) {
   event.preventDefault();
   const goal = document.querySelector('input[name="goal"]:checked').value;
