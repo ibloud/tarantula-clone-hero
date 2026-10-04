@@ -17,7 +17,7 @@ const routes = {
   },
   build: {
     ipad: ['Play and edit one original exercise', 'Listen to the motif, change a note or action, and try the untimed route. Export the chart locally.', 'https://ibloud.github.io/ren-tap-tap-revenge/lesson.html', 'Open the music/code exercise', 'Local prototype. iPad, Files and VoiceOver checks remain open; no Cyber-G input is connected.'],
-    computer: ['Map a note to a game action', 'Change the original exercise tempo or first-note action. Compare timed practice with the untimed route.', 'https://ibloud.github.io/ren-tap-tap-revenge/lesson.html', 'Open the music/code exercise', 'Synthetic tones and simulated game actions. MIDI/OSC and Clone Hero conversion are not implemented.'],
+    computer: ['Learn one controller pad', 'Connect MIDI in a supporting browser, learn a pad/button, and try Untimed next note before timed taps.', 'https://ibloud.github.io/ren-tap-tap-revenge/lesson.html#controller', 'Open the MIDI control exercise', 'Permission and browser support are required; physical DJ2GO2 behavior is unverified. OSC and Clone Hero conversion are not implemented.'],
     browser: ['Start without a controller', 'Use Next note to step through the original motif. Change one value and inspect the note data.', 'https://ibloud.github.io/ren-tap-tap-revenge/lesson.html', 'Open the untimed exercise', 'No account or instrument required. Audio and downloads need testing in your browser.']
   }
 };
