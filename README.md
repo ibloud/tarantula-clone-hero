@@ -13,6 +13,14 @@ Financial support is optional and sustains infrastructure, maintenance, accessib
 
 A custom, community-focused Clone Hero chart for the hard-hitting track **"Tarantula"** by **Ren** and **Chris Webby**, from the *Inpatient* project. This repository hosts both the playable configuration template files and a landing page guide.
 
+## Source-based music lessons
+
+We are planning companion lessons using Ren Gill's own explanations of his creative process, with timestamp-supported questions and optional rhythm-game practice using rights-cleared public-domain material. This is separate from PIXIE and follows the same commitments to accessibility, consent, privacy, and honest evidence limits.
+
+"My responses are limited to this source" and "not stated in this source" are valid outcomes. Controller accuracy is not a substitute for musical understanding.
+
+[Lesson design, ethics, rights records, and pilot acceptance checks](docs/ETHICAL_MUSIC_LESSONS.md). Status: proposal; no completed lesson pack or validated learning outcome yet.
+
 ---
 
 ## 🛠️ Technical Setup & Play Along Links
@@ -35,7 +43,7 @@ To compile and play this custom chart, you will need the following tools:
 
 ## 📝 Installation Instructions
 
-1. Download or record the audio from the official music video and export it as `song.ogg` using **Audacity**.
+1. Use audio only when you have an appropriate rights basis for the intended copying, adaptation, and use. This repository supplies no audio or permission for Tarantula. For the proposed lesson pilot, use a verified public-domain composition and a recording we own or are permitted to distribute; export that permitted recording as `song.ogg` using **Audacity**.
 2. Create a folder in your Clone Hero songs directory: `Clone Hero/Songs/Ren x Chris Webby - Tarantula`.
 3. Place `song.ogg`, the provided `song.ini`, and your finished `notes.chart` in that folder.
 4. Open Clone Hero and run **Settings > General > Scan Songs**.
@@ -54,5 +62,6 @@ To compile and play this custom chart, you will need the following tools:
 
 ## ⚖️ Licensing & Copyright
 
-* **Custom Code (`index.html`, `song.ini`, `.chart` structure):** Released under the **MIT License**. You are free to modify, distribute, fork, and share these files without restriction.
-* **Music & Audio:** All rights belong entirely to **Ren Gill** and **Chris Webby**. This is a non-profit, fan-made project created for educational and personal recreational purposes under fair-use standards within the Clone Hero community. No commercial distribution is permitted.
+* **Original Project Material:** The MIT License applies only to original material we have authority to license. It does not cover third-party music, lyrics, arrangements, recordings, charts, or Clone Hero itself.
+* **Artist Works:** Rights remain with their respective rights holders. This independent fan project has no documented artist endorsement or permission to redistribute their works. Educational or noncommercial purpose does not automatically establish fair use.
+* **Current Template:** The Tarantula files are unverified templates, not a completed playable chart or rights-cleared lesson pack. Timing, lyrics, metadata, and permissions require review before reuse.
