@@ -1,366 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tarantula (Ren x Chris Webby) - Clone Hero Custom Chart Project</title>
-  <meta name="description" content="A fan-made Clone Hero custom-chart project for Tarantula by Ren and Chris Webby.">
-  <meta property="og:title" content="Tarantula — Clone Hero Custom Chart Project">
-  <meta property="og:description" content="A fan-made Clone Hero custom-chart project for Tarantula by Ren and Chris Webby.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ibloud.github.io/tarantula-clone-hero/">
-  <meta property="og:image" content="https://ibloud.github.io/tarantula-clone-hero/assets/social-preview.png">
-  <meta property="og:image:width" content="1280">
-  <meta property="og:image:height" content="640">
-  <meta property="og:image:alt" content="Tarantula Clone Hero custom-chart project artwork">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://ibloud.github.io/tarantula-clone-hero/assets/social-preview.png">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:       #0d0c10;
-      --surface:  #181818;
-      --border:   #2a2a2a;
-      --text:     #f1f1f5;
-      --muted:    #999999;
-      --dim:      #666666;
-      --red:      #c0392b;
-      --red-dark: #9b2d20;
-      --red-bg:   #1a0a08;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: var(--text); text-decoration: none; }
-    a:hover { color: #fff; }
-
-    .page { max-width: 800px; margin: 0 auto; padding: 0 1.5rem 4rem; }
-
-    /* ── Header ── */
-    header { text-align: center; padding: 3rem 0 0; }
-    header h1 {
-      font-size: clamp(2rem, 6vw, 3rem);
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-    .header-sub { font-size: 1rem; color: var(--muted); margin-bottom: 1.5rem; }
-    .header-rule {
-      border: none;
-      border-top: 2px solid var(--red);
-      margin: 0 auto 2rem;
-      width: 100%;
-    }
-
-    /* ── Video embed ── */
-    .video-wrap {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 6px;
-      background: #000;
-      margin-bottom: 1.5rem;
-    }
-    .video-wrap iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: none;
-    }
-
-    /* ── Buttons ── */
-    .action-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin-bottom: 2.5rem;
-    }
-    .btn-primary {
-      display: inline-block;
-      background: var(--red);
-      color: #fff;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.85rem 2rem;
-      border-radius: 4px;
-      transition: background 0.15s;
-    }
-    .btn-primary:hover { background: var(--red-dark); color: #fff; }
-
-    /* ── Section headings ── */
-    h2 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #fff;
-      margin: 2.5rem 0 0.85rem;
-      padding-left: 0.85rem;
-      border-left: 3px solid var(--red);
-    }
-
-    /* ── Prose ── */
-    p { color: var(--muted); margin-bottom: 1rem; max-width: 68ch; }
-    p strong { color: var(--text); font-weight: 600; }
-
-    /* ── Ordered steps ── */
-    .steps {
-      list-style: none;
-      margin: 0.5rem 0 1rem;
-      display: flex; flex-direction: column; gap: 10px;
-    }
-    .steps li {
-      display: flex; gap: 12px; align-items: flex-start;
-      color: var(--muted); font-size: 0.95rem;
-    }
-    .step-num {
-      background: var(--red-bg);
-      border: 1px solid #5a1a12;
-      color: var(--red);
-      border-radius: 3px;
-      font-size: 11px;
-      font-weight: 700;
-      min-width: 22px; height: 22px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; margin-top: 3px;
-    }
-
-    /* ── Tool links ── */
-    .tools {
-      list-style: none;
-      margin: 0.5rem 0 1rem;
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    .tools li {
-      display: flex; gap: 10px; align-items: flex-start;
-      color: var(--muted); font-size: 0.95rem;
-    }
-    .tools li::before { content: '→'; color: var(--red); flex-shrink: 0; line-height: 1.7; }
-    .tools a { color: #bbb; text-decoration: underline; text-decoration-color: #444; }
-    .tools a:hover { color: #fff; }
-
-    /* ── Code blocks ── */
-    .code-label {
-      font-size: 11px;
-      color: var(--red);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin: 1.5rem 0 0.4rem;
-    }
-    pre {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 1rem 1.25rem;
-      overflow-x: auto;
-      font-size: 0.82rem;
-      line-height: 1.6;
-      color: #ccc;
-      font-family: "SF Mono", "Fira Code", "Fira Mono", monospace;
-      margin-bottom: 1rem;
-    }
-
-    /* ── Artist table ── */
-    .artist-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-      font-size: 0.875rem;
-    }
-    .artist-table th {
-      text-align: left;
-      padding: 0.6rem 1rem;
-      color: var(--dim);
-      font-weight: 500;
-      border-bottom: 1px solid var(--border);
-      font-size: 11px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .artist-table td {
-      padding: 0.75rem 1rem;
-      color: var(--muted);
-      border-bottom: 1px solid var(--border);
-      vertical-align: top;
-    }
-    .artist-table tr:last-child td { border-bottom: none; }
-    .artist-table td strong { color: var(--text); }
-    .artist-table a { color: #bbb; text-decoration: underline; text-decoration-color: #444; }
-    .artist-table a:hover { color: #fff; }
-
-    /* ── Footer ── */
-    footer {
-      margin-top: 3rem;
-      border-top: 1px solid var(--border);
-      padding-top: 1.5rem;
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 0.75rem;
-    }
-    footer span { font-size: 0.82rem; color: var(--dim); }
-    footer a { font-size: 0.82rem; color: var(--dim); }
-    footer a:hover { color: var(--text); }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tarantula — Music, Code &amp; Play | Loptr Lab</title>
+<meta name="description" content="Find your way into music, coding and game making. An independent community learning project with iPad pathways, source-based lessons and accessible practice.">
+<meta property="og:title" content="Tarantula — Music, Code &amp; Play">
+<meta property="og:description" content="One community project. Many ways to learn: play, record, code music or build a game.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ibloud.github.io/tarantula-clone-hero/">
+<meta property="og:image" content="https://ibloud.github.io/tarantula-clone-hero/assets/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Original Tarantula custom-chart project artwork">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+*{box-sizing:border-box}html{scroll-padding-top:1rem}body{margin:0;background:#0d0c10;color:#f1f1f5;font:1rem/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+:root{--muted:#b8b5bf;--surface:#18171c;--border:#38343e;--accent:#ee796c}
+a{color:#f5aaa0;text-underline-offset:.22em}a:hover{color:white}button,input,select{font:inherit}
+button,select{min-height:48px}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #f5cc78;outline-offset:5px}
+[hidden]{display:none!important}.page{max-width:960px;margin:auto;padding:0 1.4rem 3rem}
+.skip{position:absolute;top:-100px;left:1rem;background:white;color:#111;padding:.7rem;z-index:10}.skip:focus{top:1rem}
+.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1.3rem 0;border-bottom:1px solid var(--border)}
+.brand{color:white;text-decoration:none;font-weight:750}.top nav{display:flex;gap:1.3rem;flex-wrap:wrap;font-size:.9rem}.top nav a{color:var(--muted)}
+header{padding:3.5rem 0 2.5rem;border-bottom:2px solid #c0392b}
+.eyebrow{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-size:clamp(2.6rem,8vw,4.5rem);line-height:1.05;margin:.8rem 0 1.2rem;letter-spacing:-.035em}
+h2{font-size:1.55rem;line-height:1.3;margin:0 0 .9rem}h3{font-size:1.15rem;margin:0 0 .5rem}
+p{max-width:72ch;margin:0 0 1rem;color:var(--muted)}strong{color:#f1f1f5}
+.lead{font-size:1.18rem;max-width:57ch}.actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin:1.4rem 0}
+.button{display:inline-block;background:#a92e25;border:1px solid #dc6456;color:white;border-radius:4px;padding:.7rem 1.1rem;text-decoration:none;font-weight:650}
+.button:hover{background:#c03b30}.secondary{background:transparent;border-color:var(--border);color:#f1f1f5}
+.status{border-left:3px solid var(--accent);padding:.2rem 0 .2rem 1rem;margin-top:1.5rem;font-size:.95rem}
+section{padding:2.8rem 0;border-bottom:1px solid var(--border)}.intro{max-width:66ch}
+fieldset{border:0;margin:1.5rem 0;padding:0}legend{font-weight:650;margin-bottom:.7rem}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+.choice{display:flex;align-items:center;gap:.8rem;padding:.8rem 1rem;border:1px solid var(--border);background:var(--surface);border-radius:5px;cursor:pointer}
+.choice:has(input:checked){border-color:var(--accent);background:#251917}.choice input{width:20px;height:20px;accent-color:#c0392b;flex-shrink:0}
+.choice span{display:block}.choice small{display:block;color:var(--muted)}
+select{display:block;width:100%;max-width:420px;color:#f1f1f5;background:var(--surface);border:1px solid var(--border);padding:.6rem .8rem;margin:.5rem 0}
+.result{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);padding:1.3rem;margin:1.4rem 0;border-radius:5px}
+.result p:last-child{margin-bottom:0}.routes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;margin-top:1.8rem}
+.route{border-top:1px solid var(--border);padding-top:1rem}.route p{font-size:.95rem}.number{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.1em}
+ol,ul{padding-left:1.4rem;color:var(--muted)}li{margin-bottom:.75rem}.tools{list-style:none;padding:0}.tools li{border-top:1px solid var(--border);padding-top:.9rem}
+blockquote{margin:1.5rem 0;padding:.8rem 1.2rem;border-left:3px solid var(--accent);font-size:1.2rem}blockquote p{color:#f1f1f5;margin:0}
+details{border:1px solid var(--border);padding:.8rem 1rem;border-radius:5px;margin:.9rem 0}summary{cursor:pointer;font-weight:650;color:#f1f1f5;min-height:32px}details p{margin:.8rem 0}
+.note{font-size:.9rem}.small-links{display:flex;gap:1rem;flex-wrap:wrap}footer{padding:1.8rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
+code{font-size:.93em;overflow-wrap:anywhere}#hackathon-list li{margin-bottom:1rem}
+@media(max-width:560px){.choices,.routes{grid-template-columns:1fr}header{padding:2.3rem 0 2rem}.top nav{gap:1rem}.page{padding-inline:1.1rem}section{padding:2rem 0}.button{width:100%;text-align:center}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
 </head>
 <body>
-  <div class="page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="page">
+<div class="top"><a class="brand" href="#main">Tarantula / Loptr Lab</a><nav aria-label="Page sections"><a href="#find-fit">Find your fit</a><a href="#learn">Learn</a><a href="#build">Build</a><a href="#hackathon-opportunities">Hackathons</a></nav></div>
+<main id="main">
+<header>
+<div class="eyebrow">Music · Code · Play</div>
+<h1>Many ways in.<br>One place to learn.</h1>
+<p class="lead">Musicians learning to code. Coders learning an instrument. People making games together. Find a small starting point that fits the tools and energy you have today.</p>
+<p>Tarantula's many legs connect these paths within one community project. The Inpatient-inspired focus is neurodivergent-friendly learning: clear next steps, room to pause, and freedom to change direction.</p>
+<div class="actions"><a class="button" href="#find-fit">Find your starting point</a><a href="#learn">Explore the learning loop</a></div>
+<p class="status"><strong>Early community prototype.</strong> The path finder works here. Source-checked Ren lessons and Cyber-G integration are still in development. This is an independent project; artist and instrument-maker participation is not established.</p>
+</header>
 
-    <header>
-      <h1>Tarantula</h1>
-      <p class="header-sub">Ren x Chris Webby (Inpatient Project)</p>
-      <hr class="header-rule" />
-    </header>
+<section id="find-fit" aria-labelledby="fit-title">
+<div class="eyebrow">Start small</div><h2 id="fit-title">Find your fit</h2>
+<p class="intro">Choose what interests you. You can switch paths at any time. No diagnosis, account, instrument purchase, or public score is required.</p>
+<form id="fit-form">
+<fieldset><legend>What would you like to try?</legend><div class="choices">
+<label class="choice"><input type="radio" name="goal" value="play" checked><span>Play an instrument<small>Try a note or a simple rhythm.</small></span></label>
+<label class="choice"><input type="radio" name="goal" value="record"><span>Record something<small>Make a short take and save it.</small></span></label>
+<label class="choice"><input type="radio" name="goal" value="code"><span>Code music<small>Change a pattern and hear it.</small></span></label>
+<label class="choice"><input type="radio" name="goal" value="build"><span>Build a game or controller<small>Connect an input to an action.</small></span></label>
+</div></fieldset>
+<label for="device"><strong>What are you using?</strong></label>
+<select id="device" name="device"><option value="ipad">iPad</option><option value="computer">Computer or Raspberry Pi</option><option value="browser">Just a browser / not sure</option></select>
+<button class="button" type="submit">Show my starting point</button>
+</form>
+<div id="fit-result" class="result" role="status" aria-live="polite" aria-atomic="true" hidden><h3 id="route-title"></h3><p id="route-step"></p><p><a id="route-link" href="#pathways">Open the suggested tool</a></p><p id="route-limit" class="note"></p></div>
+<noscript><p>Use the four paths below to choose a starting point. The suggested-path button needs JavaScript; the guides and links work without it.</p></noscript>
+<div id="pathways" class="routes">
+<article class="route"><span class="number">01 / PLAY</span><h3>Your first note</h3><p>Use GarageBand's touch instruments on iPad, explore keyboard practice in Synthesia, or play along on an instrument you already have.</p><a href="https://www.apple.com/ios/garageband/">GarageBand</a> · <a href="https://synthesiagame.com/">Synthesia</a></article>
+<article class="route"><span class="number">02 / RECORD</span><h3>A take you can keep</h3><p>Record and edit in GarageBand on iPad or Audacity on desktop. Save an audio copy locally before deciding whether to share it.</p><a href="https://support.apple.com/guide/garageband-ipad/share-songs-chs39284d66/ipados">iPad export guide</a> · <a href="https://www.audacityteam.org/">Audacity</a></article>
+<article class="route"><span class="number">03 / CODE</span><h3>Hear what your code does</h3><p>Start with Sonic Pi. Change one note, pause, or rhythm. Its browser version offers a starting point; controller features vary by platform.</p><a href="https://projects.raspberrypi.org/en/projects/getting-started-with-sonic-pi">Sonic Pi introduction</a> · <a href="https://sonic-pi.net/">Open Sonic Pi</a></article>
+<article class="route"><span class="number">04 / BUILD</span><h3>One input. One action.</h3><p>Inspect the existing tap-game prototype, edit chart events, or experiment with a controller feeding MIDI/OSC into a supported environment.</p><a href="https://ibloud.github.io/ren-tap-tap-revenge/">Try the tap-game prototype</a> · <a href="https://github.com/ibloud/ren-tap-tap-revenge">Read its code</a></article>
+</div>
+<p class="note" style="margin-top:1.5rem">Each route also has a self-paced listening or reading option. <a href="https://github.com/ibloud/tarantula-clone-hero/blob/main/docs/FIND_YOUR_FIT.md">Read the full pathway guide</a>.</p>
+</section>
 
-    <div class="video-wrap">
-      <iframe
-        src="https://www.youtube.com/embed/0DTrjpIb4QI"
-        title="Inpatient (Ren x Chris Webby) - Tarantula"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
+<section id="learn" aria-labelledby="learn-title"><div class="eyebrow">Shared learning loop</div><h2 id="learn-title">Watch. Understand. Try. Change.</h2>
+<p>Planned lessons will use videos where Ren Gill explains his creative process. Questions will point to a checked timestamp. Practice will use our own exercises or verified public-domain material with permitted recordings.</p>
+<ol><li><strong>Watch or read:</strong> explore one authorized source at your own pace.</li><li><strong>Ask what it establishes:</strong> separate the artist's explanation from our interpretation.</li><li><strong>Try one idea:</strong> play, listen, record, or code a short exercise.</li><li><strong>Change and reflect:</strong> make one adjustment, describe it, and optionally save your work.</li></ol>
+<blockquote><p>“My responses are limited to this source.”</p></blockquote>
+<p>“Not stated in this source” can be a correct answer. The guide will cite its evidence rather than inventing an artist's intentions. No source-checked quiz or conversational bot is available yet.</p>
+<details><summary>Why Tarantula and Inpatient?</summary><p>The project grew from a fan chart for “Tarantula,” by Ren and Chris Webby. Its many paths now connect music, learning, coding and play. We design for different attention and access needs without asking people to disclose a diagnosis.</p><p><a href="https://www.youtube.com/watch?v=0DTrjpIb4QI">Watch the referenced Tarantula video on YouTube</a> · <a href="https://inpatient.world">Explore Inpatient World</a>. This music video is a reference, not a verified process lesson.</p></details>
+</section>
 
-    <div class="action-row">
-      <a class="btn-primary" href="https://inpatient.world" target="_blank" rel="noopener noreferrer">Explore Inpatient World</a>
-    </div>
+<section id="build" aria-labelledby="build-title"><div class="eyebrow">For contributors</div><h2 id="build-title">Finish one useful learning loop</h2>
+<p>Help someone move from a musical idea to a small working result. The first milestone is one verified source, three evidence-backed questions, one cleared exercise, and an accessible alternative.</p>
+<ul><li><strong>Musicians:</strong> check the exercise, explanations, and musical usefulness.</li><li><strong>Coders:</strong> connect the lesson, chart editing, local export, and calm feedback.</li><li><strong>Players and accessibility reviewers:</strong> test touch, keyboard, readable steps, focus, and recovery.</li></ul>
+<div class="actions"><a class="button secondary" href="https://github.com/ibloud/tarantula-clone-hero">Explore the Tarantula repository</a><a href="https://github.com/ibloud/ren-tap-tap-revenge/blob/main/docs/CYBER_G_LEARNING_LAB.md">Read the developer scope</a></div>
+<details><summary>Cyber-G: play along first, validate input separately</summary><p>Cyber-G can be an optional instrument alongside the lesson. USB audio and MIDI note events are different capabilities. Model, module, firmware, receiving app, and browser all need checking before automatic scoring or control is promised.</p><p>Start with GarageBand recording and local export, then test audio and keyboard MIDI separately. Safari browser MIDI access is not established by MIDI working in a native app.</p></details>
+<details><summary>Optional tools: notation, sound and controllers</summary><p><a href="https://musescore.org/">MuseScore Studio</a> supports the notation route; <a href="https://www.musehub.com/">MuseHub</a> offers optional sounds and effects. Desktop plugins are not automatically iPad-compatible. Use built-in sounds before adding dependencies.</p><p><a href="https://sonic-pi.net/tutorial-11.html">Sonic Pi MIDI</a> and <a href="https://sonic-pi.net/tutorial-12.html">OSC</a> can connect controllers to sounds. Sonic Pi Web does not provide MIDI in Safari or browser OSC; use a supported app/environment for those experiments.</p></details>
+<details><summary>Legacy Clone Hero templates</summary><p><a href="song.ini">song.ini</a> and <a href="notes.chart">notes.chart</a> remain unverified source templates. They are not a finished playable pack and supply no audio or artist permission. Validate metadata, timing, chart content and rights before reuse.</p><p><a href="https://clonehero.net/">Clone Hero</a> offers optional controller rhythm practice. <a href="https://github.com/FireFox2000000/Moonscraper-Chart-Editor">Moonscraper</a> edits charts. Game scores do not establish instrumental technique or musical understanding.</p></details>
+<p class="note">Contribution is voluntary and currently unpaid. Agree on scope, credit, public visibility and an exit path before work begins. Sponsorship does not buy participation, approvals, employment or ownership. <a href="https://github.com/ibloud/ibloud.github.io/blob/main/MISSION.md">Read the participation terms</a>.</p>
+</section>
 
-    <h2>Music lessons: watch, understand, practice</h2>
-    <p>Planned companion lessons will pair Ren Gill's own process explanations with timestamp-supported questions and optional Clone Hero practice using verified public-domain material and permitted recordings. This project is separate from PIXIE and shares its commitments to accessibility, consent, privacy, and honest evidence limits.</p>
-    <p><strong>Status: proposal.</strong> No completed lesson pack or validated learning outcome is available yet. “My responses are limited to this source” and “not stated in this source” are valid answers. An untimed alternative learning route is required.</p>
-    <p><a href="https://github.com/ibloud/tarantula-clone-hero/blob/main/docs/ETHICAL_MUSIC_LESSONS.md" style="text-decoration:underline;">Read the lesson plan and ethics policy</a></p>
+<section id="ethics" aria-labelledby="ethics-title"><div class="eyebrow">Same commitments as PIXIE · Separate project</div><h2 id="ethics-title">Choice, evidence and care</h2>
+<p>Pause, replay, skip or change paths. No forced streaks, required rankings, or personal health disclosures. No accounts, forms sending data, or analytics are added to this page; external tools have their own policies.</p>
+<p>Keep practice and recording local first. <a href="https://audio.com/">Audio.com</a> is an optional sharing route after reviewing credits, permissions and publication settings. An unlisted recording is still accessible to anyone with its link.</p>
+<p>Publicly viewable music is not public domain. Composition, arrangement, recording, chart and video rights need separate consideration. MIT covers original project material we can license; it does not license artist works or third-party software.</p>
+<p><a href="https://github.com/ibloud/tarantula-clone-hero/blob/main/docs/ETHICAL_MUSIC_LESSONS.md">Read the lesson ethics and rights policy</a>.</p>
+</section>
 
-    <h2>Custom chart setup template</h2>
-
-    <p>The Tarantula configuration is an unverified template, not a completed playable chart or rights-cleared lesson. Review timing, metadata, lyrics, and permissions before reuse. The general setup below requires permitted audio and a finished chart.</p>
-
-    <ul class="steps">
-      <li><span class="step-num">1</span><span><strong>Get the audio:</strong> Use a recording only with an appropriate rights basis for copying, adapting, and using it. This project supplies no Tarantula audio or permission. For the lesson pilot, use a verified public-domain composition and a recording we own or are permitted to distribute. Export the permitted recording as <code>song.ogg</code>.</span></li>
-      <li><span class="step-num">2</span><span><strong>Create a song folder:</strong> Create a folder inside your Clone Hero <code>Songs</code> directory named <code>Ren - Tarantula (ft. Chris Webby)</code>.</span></li>
-      <li><span class="step-num">3</span><span><strong>Generate files:</strong> Copy the two configuration scripts below into separate raw text documents. Save them exactly as <code>song.ini</code> and <code>notes.chart</code> inside your newly created folder.</span></li>
-      <li><span class="step-num">4</span><span><strong>Scan songs:</strong> Open Clone Hero on your computer, navigate to <strong>Settings &gt; General &gt; Scan Songs</strong>.</span></li>
-      <li><span class="step-num">5</span><span><strong>Play:</strong> Grab your guitar controller, queue up the track, and hit the highway!</span></li>
-    </ul>
-
-    <h2>Source configuration files</h2>
-
-    <p>Paste these files directly into your song folder to build out the track's metadata framework, lyrics, sync track, and sections.</p>
-
-    <div class="code-label">song.ini</div>
-    <pre>[Song]
-name = Tarantula
-artist = Ren x Chris Webby
-album = Inpatient
-genre = Hip Hop / Rap
-year = 2026
-charter = YourName & Loptr Lab
-preview_start_time = 57000
-icon = custom
-diff_guitar = 3
-diff_band = 3</pre>
-
-    <div class="code-label">notes.chart</div>
-    <pre>[Song]
-{
-  Name = "Tarantula"
-  Artist = "Ren x Chris Webby"
-  Album = "Inpatient"
-  Genre = "Hip Hop"
-  Year = ", 2026"
-  Charter = "YourName & Loptr Lab"
-  Offset = 0
-  Resolution = 192
-  Difficulty = 3
-  PreviewStart = 57
-  PreviewEnd = 87
-  Genre = "Hip Hop/Rap"
-  MediaType = "cd"
-  MusicStream = "song.ogg"
-}
-[SyncTrack]
-{
-  0 = TS 4
-  0 = B 140000
-}
-[Events]
-{
-  0 = E "section Intro"
-  5824 = E "section Ren's Intro"
-  5824 = E "lyric tarantula "
-  6272 = E "lyric gang "
-  6720 = E "lyric gang "
-  7168 = E "lyric right "
-  7616 = E "lyric from "
-  8064 = E "lyric the "
-  8512 = E "lyric stereo"
-  11648 = E "section Chorus 1"
-  11648 = E "lyric I "
-  12096 = E "lyric just "
-  12544 = E "lyric let "
-  12992 = E "lyric go "
-  13440 = E "lyric there's "
-  13888 = E "lyric a "
-  14336 = E "lyric crack "
-  14784 = E "lyric in "
-  15232 = E "lyric my "
-  15680 = E "lyric design"
-  25536 = E "section Build-up"
-  54208 = E "section Chris Webby's Verse"
-  88256 = E "section Chorus 2"
-  100000 = E "section Instrumental Bridge"
-  131712 = E "section Collab Verse"
-  144256 = E "section Outro"
-}
-[Single]
-{
-  # Place your custom notes here using Moonscraper
-}</pre>
-
-    <h2>Required tools</h2>
-
-    <ul class="tools">
-      <li><strong>Audio prepping:</strong> <a href="https://www.audacityteam.org/" target="_blank" rel="noopener noreferrer">Audacity</a> — convert your sourced audio into a pristine <code>song.ogg</code> file.</li>
-      <li><strong>Chart customization:</strong> <a href="https://github.com/FireFox2000000/Moonscraper-Chart-Editor" target="_blank" rel="noopener noreferrer">Moonscraper Chart Editor</a> — open <code>notes.chart</code> and manually map out your fret buttons.</li>
-      <li><strong>The game:</strong> <a href="https://clonehero.net/" target="_blank" rel="noopener noreferrer">Clone Hero Official Site</a>.</li>
-    </ul>
-
-    <h2>Artist information &amp; contacts</h2>
-
-    <table class="artist-table">
-      <thead>
-        <tr>
-          <th>Artist</th>
-          <th>Website</th>
-          <th>Contact</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Ren (Ren Gill)</strong></td>
-          <td><a href="https://renmakesmusic.lnk.to/" target="_blank" rel="noopener noreferrer">renmakesmusic.lnk.to</a></td>
-          <td><a href="mailto:connor@renmakesmusic.com">connor@renmakesmusic.com</a></td>
-        </tr>
-        <tr>
-          <td><strong>Chris Webby</strong></td>
-          <td><a href="https://chriswebby.com" target="_blank" rel="noopener noreferrer">chriswebby.com</a></td>
-          <td><a href="mailto:booking@chriswebby.com">booking@chriswebby.com</a></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>Custom chart files built in collaboration with <a href="https://loptrlab.com" target="_blank" rel="noopener noreferrer" style="color:#bbb; text-decoration:underline; text-decoration-color:#444;">Loptr Lab</a>. This independent fan project has no documented artist endorsement. Educational or noncommercial use does not automatically establish fair use. The MIT license covers original project material we can license; third-party music, lyrics, recordings, and Clone Hero have separate rights.</p>
-
-
-    <!-- BEGIN HACKATHON OPPORTUNITIES -->
+<!-- BEGIN HACKATHON OPPORTUNITIES -->
     <section id="hackathon-opportunities" aria-labelledby="hackathon-heading">
       <h2 id="hackathon-heading">Hackathons &amp; creative build opportunities</h2>
       <p>Checked October 4, 2026. Refreshed every two weeks. Choose an opportunity that supports the learning project; eligibility and requirements still need checking. Deadlines below use Chicago time.</p>
@@ -373,27 +128,56 @@ diff_band = 3</pre>
       <p><a href="https://github.com/ibloud/tarantula-clone-hero/blob/main/docs/HACKATHONS.md" style="text-decoration:underline;">Read requirements, source links and refresh policy</a>. Listing an event does not establish affiliation or confirmed eligibility.</p>
     </section>
     <!-- END HACKATHON OPPORTUNITIES -->
-
-    <footer>
-      <span>ibloud · tarantula-clone-hero · MIT License</span>
-      <a href="https://github.com/ibloud/tarantula-clone-hero/edit/main/index.html">Improve this page →</a>
-    </footer>
-
-  </div>
+</main>
+<footer><span>Tarantula · An independent Loptr Lab community project</span><a href="https://github.com/ibloud/tarantula-clone-hero">Source &amp; contribution</a><a href="https://loptrlab.com">Loptr Lab</a></footer>
+</div>
 <script>
-  // Hide expired opportunities between scheduled source refreshes.
-  function removeExpiredHackathons() {
-    const now = Date.now();
-    document.querySelectorAll('#hackathon-list [data-deadline]').forEach(function (item) {
-      const deadline = Date.parse(item.dataset.deadline);
-      if (!Number.isFinite(deadline) || deadline <= now) item.remove();
-    });
-    document.getElementById('hackathon-empty').hidden =
-      document.querySelector('#hackathon-list [data-deadline]') !== null;
+const routes = {
+  play: {
+    ipad: ['Start with a touch instrument', 'Open GarageBand and try one note. Listen, then repeat it at your own pace.', 'https://www.apple.com/ios/garageband/', 'Open GarageBand information', 'An external instrument is optional. Cyber-G input is not verified here.'],
+    computer: ['Try a short keyboard exercise', 'Explore Synthesia with an original or cleared exercise. Practice one small phrase.', 'https://synthesiagame.com/', 'Explore Synthesia', 'Check device support and any paid-feature requirements before choosing it.'],
+    browser: ['Listen before you play', 'Explore a short Sonic Pi sound example. You can listen and change a note without buying an instrument.', 'https://sonic-pi.net/', 'Explore Sonic Pi', 'Browser audio and accessibility still need testing on your device.']
+  },
+  record: {
+    ipad: ['Record a short take on iPad', 'Use GarageBand Audio Recorder, save the project, then share an audio copy to Files.', 'https://support.apple.com/guide/garageband-ipad/share-songs-chs39284d66/ipados', 'Open the iPad export guide', 'Try the built-in microphone first. Cyber-G USB recording needs a separate device test.'],
+    computer: ['Record and edit on desktop', 'Use Audacity to record a few seconds of original sound and export an audio copy locally.', 'https://www.audacityteam.org/', 'Explore Audacity', 'Audacity is the desktop route. No upload or publication is required.'],
+    browser: ['Choose a recording route', 'Use the pathway guide to pick a recorder for your device. Keep your first take local.', 'https://github.com/ibloud/tarantula-clone-hero/blob/main/docs/FIND_YOUR_FIT.md', 'Read recording pathways', 'This page does not access your microphone or record audio.']
+  },
+  code: {
+    ipad: ['Change one sound with code', 'Try Sonic Pi Web: change one note or pause, run it, and listen for the difference.', 'https://sonic-pi.net/', 'Explore Sonic Pi Web', 'The web version is separate from the app: MIDI is unavailable in Safari and OSC is app-only.'],
+    computer: ['Start coding music', 'Follow the Raspberry Pi Foundation Sonic Pi introduction. Change one note or rhythm before adding a controller.', 'https://projects.raspberrypi.org/en/projects/getting-started-with-sonic-pi', 'Open the Sonic Pi introduction', 'Use the current Sonic Pi version; tutorial and platform features may differ.'],
+    browser: ['Try music as code', 'Explore Sonic Pi Web with a short original pattern. Begin with playback, then change one value.', 'https://sonic-pi.net/', 'Explore Sonic Pi Web', 'External device support varies by browser. You can begin without a controller.']
+  },
+  build: {
+    ipad: ['Begin with the tap-game prototype', 'Try the existing browser prototype or inspect its chart data. Start with one tap mapped to one action.', 'https://ibloud.github.io/ren-tap-tap-revenge/', 'Open the experimental tap game', 'The prototype needs real iPad and accessibility checks. It is not a source-checked Ren lesson.'],
+    computer: ['Inspect an input-to-game example', 'Read the tap-game code and chart events. Change one mapping before adding MIDI or OSC hardware.', 'https://github.com/ibloud/ren-tap-tap-revenge', 'Read the prototype code', 'Use original or cleared content. Hardware input and chart import still need development.'],
+    browser: ['Explore game-making pathways', 'Read how simulated inputs, charts and controller experiments connect to one learning loop.', 'https://github.com/ibloud/tarantula-clone-hero/blob/main/docs/FIND_YOUR_FIT.md', 'Read the build pathway', 'A controller is optional. Simulation is not evidence of hardware compatibility.']
   }
-  removeExpiredHackathons();
-  setInterval(removeExpiredHackathons, 60000);
-  document.addEventListener('visibilitychange', removeExpiredHackathons);
+};
+document.getElementById('fit-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const goal = document.querySelector('input[name="goal"]:checked').value;
+  const device = document.getElementById('device').value;
+  const route = routes[goal][device];
+  document.getElementById('route-title').textContent = route[0];
+  document.getElementById('route-step').textContent = route[1];
+  const link = document.getElementById('route-link');
+  link.href = route[2]; link.textContent = route[3];
+  document.getElementById('route-limit').textContent = route[4];
+  document.getElementById('fit-result').hidden = false;
+});
+function removeExpiredHackathons() {
+  const now = Date.now();
+  document.querySelectorAll('#hackathon-list [data-deadline]').forEach(function(item) {
+    const deadline = Date.parse(item.dataset.deadline);
+    if (!Number.isFinite(deadline) || deadline <= now) item.remove();
+  });
+  document.getElementById('hackathon-empty').hidden =
+    document.querySelector('#hackathon-list [data-deadline]') !== null;
+}
+removeExpiredHackathons();
+setInterval(removeExpiredHackathons, 60000);
+document.addEventListener('visibilitychange', removeExpiredHackathons);
 </script>
 </body>
 </html>
