@@ -359,11 +359,41 @@ diff_band = 3</pre>
 
     <p>Custom chart files built in collaboration with <a href="https://loptrlab.com" target="_blank" rel="noopener noreferrer" style="color:#bbb; text-decoration:underline; text-decoration-color:#444;">Loptr Lab</a>. This independent fan project has no documented artist endorsement. Educational or noncommercial use does not automatically establish fair use. The MIT license covers original project material we can license; third-party music, lyrics, recordings, and Clone Hero have separate rights.</p>
 
+
+    <!-- BEGIN HACKATHON OPPORTUNITIES -->
+    <section id="hackathon-opportunities" aria-labelledby="hackathon-heading">
+      <h2 id="hackathon-heading">Hackathons &amp; creative build opportunities</h2>
+      <p>Checked October 4, 2026. Refreshed every two weeks. Choose an opportunity that supports the learning project; eligibility and requirements still need checking. Deadlines below use Chicago time.</p>
+      <ul class="tools" id="hackathon-list">
+        <li data-deadline="2027-01-02T17:00:00Z"><span><a href="https://innovart2027.devpost.com/" target="_blank" rel="noopener noreferrer">InnovArt 2027</a> — online; due January 2, 2027 at 11:00 a.m. CST. Strong subject fit for music, creative coding, adaptive art and instrument tools. <strong>Eligibility unresolved:</strong> student-only badges conflict with broader overview/rules text. Submission and presentation required.</span></li>
+        <li data-deadline="2026-10-31T03:45:00Z"><span><a href="https://qloo.devpost.com/" target="_blank" rel="noopener noreferrer">Qloo Agentic Hackathon</a> — online; due October 30, 2026 at 10:45 p.m. CDT. Conditional fit for music discovery; requires meaningful Qloo API use, an agentic app, a working public demo and open-source code.</span></li>
+        <li data-deadline="2026-10-14T04:45:00Z"><span><a href="https://warriorhacks-2-0.devpost.com/" target="_blank" rel="noopener noreferrer">WarriorHacks 2.0</a> — online; due October 13, 2026 at 11:45 p.m. CDT. Community learning fit for eligible student contributors aged 13+; organizations are excluded.</span></li>
+      </ul>
+      <p id="hackathon-empty" hidden>No current opportunities remain in this checked list. The next refresh will search for suitable events.</p>
+      <p><a href="https://github.com/ibloud/tarantula-clone-hero/blob/main/docs/HACKATHONS.md" style="text-decoration:underline;">Read requirements, source links and refresh policy</a>. Listing an event does not establish affiliation or confirmed eligibility.</p>
+    </section>
+    <!-- END HACKATHON OPPORTUNITIES -->
+
     <footer>
       <span>ibloud · tarantula-clone-hero · MIT License</span>
       <a href="https://github.com/ibloud/tarantula-clone-hero/edit/main/index.html">Improve this page →</a>
     </footer>
 
   </div>
+<script>
+  // Hide expired opportunities between scheduled source refreshes.
+  function removeExpiredHackathons() {
+    const now = Date.now();
+    document.querySelectorAll('#hackathon-list [data-deadline]').forEach(function (item) {
+      const deadline = Date.parse(item.dataset.deadline);
+      if (!Number.isFinite(deadline) || deadline <= now) item.remove();
+    });
+    document.getElementById('hackathon-empty').hidden =
+      document.querySelector('#hackathon-list [data-deadline]') !== null;
+  }
+  removeExpiredHackathons();
+  setInterval(removeExpiredHackathons, 60000);
+  document.addEventListener('visibilitychange', removeExpiredHackathons);
+</script>
 </body>
 </html>
