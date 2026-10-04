@@ -1,6 +1,6 @@
 # Find your fit — one Tarantula learning loop
 
-Status: pathway specification, not an implemented chooser or verified hardware integration.
+Status: the public page implements a goal/device chooser. The linked original music/code exercise implements local practice, bounded edits and chart import/export. Physical hardware and iPad workflows remain unverified.
 
 Tarantula is the home for this multifaceted community learning experience. Its routes share one lesson, rights policy, and accessible fallback. The Ren tap-game repository supplies a reusable practice prototype; it is not a competing learning platform.
 
@@ -22,7 +22,7 @@ Use answers to offer one suggested route and alternatives, not a ranking of lear
 | Play an instrument | GarageBand Touch Instruments; optional Synthesia keyboard practice; Cyber-G play-along | Existing instrument and optional Synthesia | Play or listen to one short original exercise |
 | Record and share | GarageBand recording/editing; export audio to Files | Audacity recording/editing and local export | Save a short recording locally |
 | Make music through code | Sonic Pi Web, subject to actual Safari usability testing | Sonic Pi app | Change a note or rhythm and hear the result |
-| Build a game | Tarantula's planned chart editor and simulated input, with a readable untimed alternative | Same lesson/chart format and input adapter | Map a note or tap to one game action |
+| Build a game | The linked original exercise’s note editor and simulated game actions, with a readable untimed alternative | Same lesson/chart format and input adapter | Map a note or tap to one game action |
 | Build a controller | Start with a simulated control or a compatible external input; verify device access | MIDI/OSC controller experiments feeding Sonic Pi or a game | One button changes one sound or game event |
 
 These are candidate routes, not claims that each integration already works.
@@ -116,3 +116,12 @@ Acceptance: a person can choose a route, complete the small outcome, switch rout
 ## Hardware reuse and compatibility
 
 The [shared PIXIE hardware guide](https://github.com/ibloud/pixie-device-stewardship/blob/main/docs/HARDWARE-PATHWAYS.md) covers iPad/iPhone, Intel/T2 Macs, Apple Silicon, Android, repair and recovery. Tarantula remains independent and uses this as a reference, not a device-support claim. Music tests must distinguish Cyber-G audio recording from MIDI control and verify actual adapters, power, drivers, accessible input and export-to-Files on the chosen hardware.
+
+
+## Implemented small loop — October 4, 2026
+
+[Open the original music/code exercise](https://ibloud.github.io/ren-tap-tap-revenge/lesson.html): listen to four synthesized notes, change tempo/pitch/duration/action, try timed tapping or Next note without timing, inspect the note table, and export/import the bounded JSON chart. This exercise is not a verified Ren process lesson and does not connect to Cyber-G or Clone Hero.
+
+[Creator session](https://ibloud.github.io/pixie-creator-os/session.html) lets the learner play selected local audio, write or skip a next-step note, pause, review, confirm, and export/import a session record. Audio is excluded from the record. Selecting audio does not rename, organize or upload it.
+
+Tarantula owns the learning routes and ethical lesson policy; the rhythm-game repo owns playable exercise code; Creator OS owns creator-session behavior. Shared hardware principles remain in Device Stewardship, device assessment in Holdings, and local provenance tooling in Narrative Provenance. Avoid copying those implementations into this landing page.
