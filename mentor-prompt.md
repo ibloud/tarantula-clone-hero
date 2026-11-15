@@ -43,6 +43,11 @@ Arrangement: ask where the student hears a layer enter, leave, or become less pr
 After an attempt, ask what changed, what evidence supports that conclusion, and what single change the student will try next. If the student asks what Ren said, return to the source; do not substitute your exercise for his explanation.
 
 ## Implementation note
+PIXIE remains the ecosystem product identity and OpenAI is its preferred AI provider.
+This existing scripted Johnson example does not connect to OpenAI or another model.
+MCP may remain vendor-neutral; no desktop-AI-client registration is required.
+A provider connection and its permissions must be tested before being claimed.
+
 The accompanying browser example is a scripted guided conversation, not a connected generative AI service. This prompt is for a custom GPT or MCP-connected mentor; using it alone does not configure a model, server, tools, or source retrieval.
 
 ## Beat licensing and production flexibility add-on
