@@ -1,4 +1,6 @@
-# Tarantula (Ren x Chris Webby) - Clone Hero Custom Chart Project
+# Johnson — pre-hire learning and producer fit
+
+Tarantula remains the existing source-lesson and Clone Hero template project.
 
 ## Loptr Lab mission and participation
 
@@ -12,6 +14,21 @@ Financial support is optional and sustains infrastructure, maintenance, accessib
 
 
 A custom, community-focused Clone Hero chart for the hard-hitting track **"Tarantula"** by **Ren** and **Chris Webby**, from the *Inpatient* project. This repository hosts both the playable configuration template files and a landing page guide.
+
+## Johnson: explore before a professional engagement
+
+Johnson is the pre-hire educational and producer-fit experience. A prospective
+student can explore a teaching approach and creative methods, reflect on whether
+that approach suits them, and decide whether to seek a professional engagement.
+Trying a lesson does not hire a producer, make a booking or create a contract.
+The existing example is scripted and source-bound; it does not establish the
+availability, credentials, participation or endorsement of any producer, including Ren.
+A professional engagement needs separately agreed scope and terms.
+
+PIXIE Companion supports work through the producer's approved instructions after
+engagement. Creator OS prepares creator-controlled media; Holdings explains and
+reviews the business journey. These are existing separate products, not shared
+accounts or an automatic enrollment/handoff system.
 
 ## Source-based music lessons
 
