@@ -125,3 +125,13 @@ The [shared PIXIE hardware guide](https://github.com/ibloud/pixie-device-steward
 [Creator session](https://ibloud.github.io/pixie-creator-os/session.html) lets the learner play selected local audio, write or skip a next-step note, pause, review, confirm, and export/import a session record. Audio is excluded from the record. Selecting audio does not rename, organize or upload it.
 
 Tarantula owns the learning routes and ethical lesson policy; the rhythm-game repo owns playable exercise code; Creator OS owns creator-session behavior. Shared hardware principles remain in Device Stewardship, device assessment in Holdings, and local provenance tooling in Narrative Provenance. Avoid copying those implementations into this landing page.
+
+## Producer fit before engagement — owner direction, 15 November 2026
+
+Johnson's learning routes help a prospective student explore a teaching approach
+and creative methods before deciding whether to seek a professional engagement.
+Trying a route creates no booking or contract, and establishes no endorsement or
+participation by Ren or another producer. Existing lessons, source attribution,
+pause/skip choices and available-equipment routes remain in place. Once scope is
+agreed, PIXIE Companion supports the authorized project and producer instructions;
+there is no automatic enrollment or shared session between these products.
