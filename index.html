@@ -85,10 +85,40 @@ code{font-size:.93em;overflow-wrap:anywhere}#hackathon-list li{margin-bottom:1re
 <div id="pathways" class="routes">
 <article class="route"><span class="number">01 / PLAY</span><h3>Your first note</h3><p>Use GarageBand's touch instruments on iPad, explore keyboard practice in Synthesia, or play along on an instrument you already have.</p><a href="https://www.apple.com/ios/garageband/">GarageBand</a> · <a href="https://synthesiagame.com/">Synthesia</a></article>
 <article class="route"><span class="number">02 / RECORD</span><h3>A take you can keep</h3><p>Record and edit in GarageBand on iPad or Audacity on desktop. Save an audio copy locally before deciding whether to share it.</p><a href="https://support.apple.com/guide/garageband-ipad/share-songs-chs39284d66/ipados">iPad export guide</a> · <a href="https://www.audacityteam.org/">Audacity</a></article>
-<article class="route"><span class="number">03 / CODE</span><h3>Hear what your code does</h3><p>Start with Sonic Pi. Change one note, pause, or rhythm. Its browser version offers a starting point; controller features vary by platform.</p><a href="https://projects.raspberrypi.org/en/projects/getting-started-with-sonic-pi">Sonic Pi introduction</a> · <a href="https://sonic-pi.net/">Open Sonic Pi</a></article>
+<article class="route"><span class="number">03 / CODE</span><h3>Hear what your code does</h3><p>Start with Sonic Pi. Change one note, pause, or rhythm. Its browser version offers a starting point; controller features vary by platform.</p><a href="#sonic-pi-lesson">Try the four-bar Sonic Pi lesson</a> · <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-sonic-pi">Sonic Pi introduction</a> · <a href="https://sonic-pi.net/">Open Sonic Pi</a></article>
 <article class="route"><span class="number">04 / BUILD</span><h3>One input. One action.</h3><p>Connect a MIDI pad or button to the original music/code exercise, inspect its messages, and test one action. Keep keyboard/touch as a fallback.</p><a href="https://ibloud.github.io/ren-tap-tap-revenge/lesson.html#controller">Learn a controller input</a> · <a href="https://github.com/ibloud/ren-tap-tap-revenge">Read its code</a></article>
 </div>
 <p class="note" style="margin-top:1.5rem">Each route also has a self-paced listening or reading option. <a href="https://github.com/ibloud/tarantula-clone-hero/blob/main/docs/FIND_YOUR_FIT.md">Read the full pathway guide</a>.</p>
+</section>
+
+<section id="sonic-pi-lesson" aria-labelledby="sonic-pi-lesson-title">
+<div class="eyebrow">Original music / live coding</div>
+<h2 id="sonic-pi-lesson-title">Sonic Pi: change one beat</h2>
+<p>This self-paced, original four-bar exercise introduces live-coded rhythm without copying the Tarantula recording or implying Ren taught this specific technique. Johnson is the learning and producer-fit guide; Sonic Pi is the separate instrument. You can read the pattern without installing anything.</p>
+<ol>
+<li><strong>Set a goal.</strong> Choose a feeling for your own loop: steady, spacious or energetic.</li>
+<li><strong>Read the rhythm.</strong> At 120 BPM, four beats make one bar. The kick sounds once each beat; the snare sounds on beats two and four.</li>
+<li><strong>Try it.</strong> Open <a href="https://sonic-pi.net/">Sonic Pi</a> in an environment that supports audio, copy the original example below into its editor, and run it. Lower listening volume first.</li>
+<li><strong>Change exactly one thing.</strong> For example, replace the snare's <code>sleep 1</code> with <code>sleep 0.5</code>, then replay; or remove the snare line for a quieter version. If the result changes length or timing, notice that rather than assuming it is musically equivalent.</li>
+<li><strong>Reflect.</strong> Which version supports your chosen feeling? Name one change and what you heard. Keep a private note or return to <a href="tutor.html">Johnson's reflection lesson</a>.</li>
+</ol>
+<pre><code>use_bpm 120
+4.times do
+  sample :bd_haus
+  sleep 1
+  sample :bd_haus
+  sample :sn_dub, amp: 0.6
+  sleep 1
+  sample :bd_haus
+  sleep 1
+  sample :bd_haus
+  sample :sn_dub, amp: 0.6
+  sleep 1
+end</code></pre>
+<p class="note">Original teaching pattern, not a transcription, performance, or verified artist explanation. This runs four bars once. The browser experience, audio output, Safari support and physical accessibility require testing on the learner's device; browser MIDI in Safari is not assumed. No sharing, microphone access, MIDI device or account is necessary to read the lesson.</p>
+<div class="actions"><a class="button" href="tutor.html">Reflect with Johnson</a><a class="button secondary" href="https://ibloud.github.io/pixie-creator-os/rave.html">Explore Rave Lab rehearsal</a></div>
+<h3>Learning and performing are different steps</h3>
+<p><strong>Tarantula / Johnson</strong> helps you learn and decide whether a producer's approach fits. <strong>PIXIE Creator OS / Rave Lab</strong> explores a virtual-event rehearsal, viewing and optional community participation. It does not run Sonic Pi or broadcast a performance for you. A future live-coded performance needs separate audio-routing, rights and stream-permission tests.</p>
 </section>
 
 <section id="learn" aria-labelledby="learn-title"><div class="eyebrow">Shared learning loop</div><h2 id="learn-title">Watch. Understand. Try. Change.</h2>
